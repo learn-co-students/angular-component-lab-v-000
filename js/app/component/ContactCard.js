@@ -1,9 +1,9 @@
 var ContactCard = {
-		// bindings: {
-		// 	name: '<',
-		// 	email: '<',
-		// 	phone: '<'
-		// },
+		bindings: {
+			name: '<',
+			email: '<',
+			phone: '<'
+		},
 		template: [
 			// '<li>',
 			// 	'<h4>Contact Card</h4>',
