@@ -1,25 +1,22 @@
 var ContactCard = {
 		bindings: {
-			name: '<',
-			email: '<',
-			phone: '<'
+			name: '=',
+			email: '=',
+			phone: '='
 		},
 		template: [
-			// '<li>',
-			// 	'<h4>Contact Card</h4>',
-			// 	'<label>Name:</label>',
-			// 	'{{ $ctrl.name }}',
-			// 	'<label>Email:</label>',
-			// 	'{{ email }}',
-			// 	'<label>Phone:</label>',
-			// 	'{{ phone }}',
-			// '</li>'
-      '<div>',
-      '<h1>Hi</h1>',
-      '</div>'
+			'<div>',
+				'<h4>Contact Card</h4>',
+				'<label>Name:</label>',
+				'{{ ctrl.name }}',
+				'<label>Email:</label>',
+				'{{ ctrl.email }}',
+				'<label>Phone:</label>',
+				'{{ ctrl.phone }}',
+			'</div>'
 		].join('')
     // controller:{},
-    // controllerAs: 'ctrl'
+    controllerAs: 'ctrl'
 		// restrict: 'E'
 
 }
