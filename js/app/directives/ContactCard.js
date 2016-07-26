@@ -1,5 +1,4 @@
-function ContactCard() {
-	return {
+var ContactCard = {
 		scope: {
 			name: '=',
 			email: '=',
@@ -9,17 +8,22 @@ function ContactCard() {
 			'<div>',
 				'<h4>Contact Card</h4>',
 				'<label>Name:</label>',
-				'{{ name }}',
+				'{{ contact.name }}',
 				'<label>Email:</label>',
-				'{{ email }}',
+				'{{ contact.email }}',
 				'<label>Phone:</label>',
-				'{{ phone }}',
+				'{{ contact.phone }}',
 			'</div>'
 		].join(''),
+    controllerAs: 'contact',
+    bindings: {
+      name: '=',
+      email: '=',
+      phone: '=',
+    },
 		restrict: 'E'
-	};
 }
 
 angular
 	.module('app')
-	.directive('contactCard', ContactCard);
+	.component('contactCard', ContactCard);
