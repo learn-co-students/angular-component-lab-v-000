@@ -1,25 +1,23 @@
-function ContactCard() {
-	return {
-		scope: {
-			name: '=',
-			email: '=',
-			phone: '='
-		},
-		template: [
-			'<div>',
-				'<h4>Contact Card</h4>',
-				'<label>Name:</label>',
-				'{{ name }}',
-				'<label>Email:</label>',
-				'{{ email }}',
-				'<label>Phone:</label>',
-				'{{ phone }}',
-			'</div>'
-		].join(''),
-		restrict: 'E'
-	};
+var ContactCard = {
+	require: { parent: '^contactController'},
+	bindings: {
+		name: '=',
+		email: '=',
+		phone: '='
+	},
+	template: [
+		'<div>',
+			'<h4>Contact Card</h4>',
+			'<label>Name:</label>',
+			'{{ contactCard.name }}',
+			'<label>Email:</label>',
+			'{{ contactCard.email }}',
+			'<label>Phone:</label>',
+			'{{ contactCard.phone }}',
+		'</div>'
+	].join('')
 }
 
 angular
 	.module('app')
-	.directive('contactCard', ContactCard);
+	.component('contactCard', ContactCard);
