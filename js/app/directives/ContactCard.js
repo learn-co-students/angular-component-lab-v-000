@@ -1,22 +1,22 @@
-function ContactCard() {
+var ContactCard() {
 	return {
-		scope: {
+		bindings: {
 			name: '=',
 			email: '=',
 			phone: '='
 		},
 		template: [
 			'<div>',
-				'<h4>Contact Card</h4>',
-				'<label>Name:</label>',
-				'{{ name }}',
-				'<label>Email:</label>',
-				'{{ email }}',
-				'<label>Phone:</label>',
-				'{{ phone }}',
-			'</div>'
+			'<h4>Contact Card</h4>',
+			'<label>Name:</label>',
+			'{{ ctrl.name }}',
+			'<label>Email:</label>',
+			'{{ ctrl.email }}',
+			'<label>Phone:</label>',
+			'{{ ctrl.phone }}',
+		'</div>'
 		].join(''),
-		restrict: 'E'
+		controllerAs: 'ctrl'
 	};
 }
 
