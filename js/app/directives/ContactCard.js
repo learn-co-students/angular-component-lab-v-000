@@ -17,8 +17,6 @@ var ContactCard = {
 		'</div>'
 	].join(''),
 	restrict: 'E',
-
-
 }
 
 angular
