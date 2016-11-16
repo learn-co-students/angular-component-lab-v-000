@@ -4,15 +4,17 @@ var ContactCard = {
 		email: '=',
 		phone: '='
 	},
+	controller: function() {},
+	controllerAs: 'wat',
 	template: [
 		'<div>',
 			'<h4>Contact Card</h4>',
 			'<label>Name:</label>',
-			'{{ $ctrl.name }}',
+			'{{ wat.name }}',
 			'<label>Email:</label>',
-			'{{ $ctrl.email }}',
+			'{{ wat.email }}',
 			'<label>Phone:</label>',
-			'{{ $ctrl.phone }}',
+			'{{ wat.phone }}',
 		'</div>'
 	].join(''),
 	restrict: 'E'
