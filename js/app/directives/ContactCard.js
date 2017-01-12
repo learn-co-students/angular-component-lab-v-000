@@ -15,9 +15,6 @@ var ContactCard = {
 				'{{ contact.phone }}',
 			'</div>'
 		].join(''),
-		controller: function($scope) {
-
-		},
 		controllerAs: 'contact'
 }
 
